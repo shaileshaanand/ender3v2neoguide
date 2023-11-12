@@ -11,7 +11,7 @@ const YoutubeVideo = ({
     <iframe
       className="aspect-video w-full"
       src={`https://www.youtube.com/embed/${videoId}?${new URLSearchParams(
-        videoProps
+        videoProps,
       ).toString()}`}
       allowFullScreen
     ></iframe>
