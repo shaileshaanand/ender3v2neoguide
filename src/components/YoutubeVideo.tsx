@@ -1,6 +1,3 @@
-import React from "@astrojs/react";
-import { boolean } from "astro/zod";
-
 const YoutubeVideo = ({
   videoId,
   vertical = false,
