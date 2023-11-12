@@ -1,0 +1,97 @@
+---
+title: Assembling the Ender 3 V2 Neo
+description: Ender 3 V2 Neo assembly guide.
+sidebar:
+  order: 1
+---
+
+import YoutubeVideo from "../../../components/YoutubeVideo";
+
+## Hardware Assembly
+
+The printer arrives in a nicely packaged cardboard box partly pre-assembled and
+requires some assembly to be performed.
+
+Follow the official assembly video by creality below till 6:28
+
+:::note[Note]
+
+I have installed a better
+[Professional Firmware](https://github.com/mriscoc/Ender3V2S1) so the
+instructions after 6:28 in the assembly video don't apply anymore
+
+:::
+
+    <YoutubeVideo videoId="dErZygToGsw" end="388" />
+
+## Professional Firmware Quick Setup
+
+For a more comprehensive setup guide see:
+
+Now we need to do some software setup. The printer has a click-wheel below the
+LCD Screen to control the UI. Turning the knob clockwise will move the UI
+Forward and turning it counter-clockwise will move the UI Backwards. The wheel
+can pre pressed to register clicks in the UI.
+
+:::note[Note]
+
+{/* TODO:add link to heading here */}
+
+I am assuming that the printer physical setting have already been done (as
+decribed in [Professional Firmware Setup](/guides/professional-firmware-setup))
+out of the box for the following steps to work.
+
+:::
+
+### Home the printer
+
+Homing the printer will ensure that the printer knows the coreect position of
+the print head. For X and Y axes, the printer uses a limit switch. For the Z
+axis, it uses a CR-Touch Probe/Sensor. Follow this video to home the printer.
+
+<YoutubeVideo videoId="tt7gfkP0jtA" />
+
+### Tram the bed
+
+Next, we need to tram the bed. Before tramming remember to clean the bed with a
+microfiber cloth. Bed Tramming makes sure that the print bed is parallel to the
+printer's X and Y axes. Follow the video below to tram your bed.
+
+<YoutubeVideo videoId="SVyjJ6fC8J4" />
+
+:::note[Bed Tramming]
+
+The tramming wizard tells how far the bed's corners are from the Z axis zero
+point. Ideally the distance should be 0 but practically we adjust the screws
+until we achieve upto 0.04mm variation between max and the min Z distance.
+
+:::
+
+### Build a Bed Mesh
+
+Next we need to build a bed mesh. Even though our corners are trammed, the print
+bed is rarely completely flat. So the CR Touch Sensor can probe the bed at 36
+different points and build a mesh of the inconsistencies in the print bed's
+surface.
+
+Goto `Prepare` > `Auto build Mesh` to start mesh leveling process. This will
+heat up the bed to 50&deg;C an then probe 36 points on the bed. You can see the
+results on the screen. Press `Continue` to save the mesh. This mesh will be
+loaded automatically every time the printer boots.
+
+<YoutubeVideo videoId="DWLOGQ__CJo" />
+
+:::note[The corners are leveled but other points are not]
+
+The corners in the Bed Mesh will be leveled as we already manually levelled them
+in the previous step but the other points are not leveled which is okay. The
+purpose of building this mesh is so that the while printing the incinsistencies
+can be compensated by adjusting the Z height.
+
+:::
+
+## Load Filament
+
+We need to load the filament to start printing!
+
+## Print your first model!

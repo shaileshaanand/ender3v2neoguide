@@ -7,7 +7,7 @@ import react from "@astrojs/react";
 export default defineConfig({
   integrations: [
     starlight({
-      title: "Docs with Tailwind",
+      title: "Ender 3 V2 Neo Guide",
       customCss: [
         // Path to your Tailwind base styles:
         "./src/tailwind.css",
