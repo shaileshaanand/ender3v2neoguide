@@ -1,5 +1,5 @@
 ---
-title: Assembling the Ender 3 V2 Neo
+title: Getting started
 description: Ender 3 V2 Neo assembly guide.
 sidebar:
   order: 1
@@ -7,7 +7,7 @@ sidebar:
 
 import YoutubeVideo from "../../../components/YoutubeVideo";
 
-## Hardware Assembly
+## 1. Hardware Assembly
 
 The printer arrives in a nicely packaged cardboard box partly pre-assembled and
 requires some assembly to be performed.
@@ -24,7 +24,7 @@ instructions after 6:28 in the assembly video don't apply anymore
 
     <YoutubeVideo videoId="dErZygToGsw" end="388" />
 
-## Professional Firmware Quick Setup
+## 2. Professional Firmware Quick Setup
 
 For a more comprehensive setup guide see:
 
@@ -43,7 +43,7 @@ out of the box for the following steps to work.
 
 :::
 
-### Home the printer
+### 3. Home the printer
 
 Homing the printer will ensure that the printer knows the coreect position of
 the print head. For X and Y axes, the printer uses a limit switch. For the Z
@@ -51,7 +51,7 @@ axis, it uses a CR-Touch Probe/Sensor. Follow this video to home the printer.
 
 <YoutubeVideo videoId="tt7gfkP0jtA" />
 
-### Tram the bed
+### 4. Tram the bed
 
 Next, we need to tram the bed. Before tramming remember to clean the bed with a
 microfiber cloth. Bed Tramming makes sure that the print bed is parallel to the
@@ -67,7 +67,7 @@ until we achieve upto 0.04mm variation between max and the min Z distance.
 
 :::
 
-### Build a Bed Mesh
+### 5. Build a Bed Mesh
 
 Next we need to build a bed mesh. Even though our corners are trammed, the print
 bed is rarely completely flat. So the CR Touch Sensor can probe the bed at 36
@@ -78,6 +78,15 @@ Goto `Prepare` > `Auto build Mesh` to start mesh leveling process. This will
 heat up the bed to 50&deg;C an then probe 36 points on the bed. You can see the
 results on the screen. Press `Continue` to save the mesh. This mesh will be
 loaded automatically every time the printer boots.
+
+:::note[The prints won't stick to the bed if it is not clean]
+
+Make sure that the bed is clean before printing/building a bed mesh. Always use
+a Microfiber Cloth (The ones that are used to clean eyeglasses) to clean the
+bed, using a regular cloth will leave cloth fibres on the bed and will result in
+prints not sticking to the bed.
+
+:::
 
 <YoutubeVideo videoId="DWLOGQ__CJo" />
 
@@ -90,8 +99,28 @@ can be compensated by adjusting the Z height.
 
 :::
 
-## Load Filament
+## 6. Load Filament
 
 We need to load the filament to start printing!
 
-## Print your first model!
+- Goto `Prepare` > `Filament Management` > `Load Filament`
+- The hotend will heat to 180&deg;C
+- It will then give 2 options `Load` and `Continue`
+- Now cut the filament at an angle, hold the extruder spring and push it into
+  the extruder (See the video below) until you feel resistance (You will feel it
+  after you push around 30cm of filament)
+- The video below demostrates the process.
+
+<YoutubeVideo videoId="-haL_RVxI5A" />
+
+## 7. Print your first model!
+
+Time to print our first model, Finally!
+
+- Clean the bed
+- Goto `Media` and you will see a file named `IETE`, if you don't, download it
+  from [here](../../../../public/IETE.gcode) and copy it to the SD Card (A card
+  reader is included in the box).
+- Click on the IETE file and then click `Print`
+- Watch the print start, Printer will first heat up, then create a bed mesh
+  again and then start printing.
