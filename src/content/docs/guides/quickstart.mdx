@@ -99,7 +99,39 @@ can be compensated by adjusting the Z height.
 
 :::
 
-## 6. Load Filament
+## 6. Set the Z-Offset
+
+This is the most important step while setting up the printer. The printer
+determines the Z=zero position using the CR-Touch Probe but the actual nozzle
+height is different from the Probe's height. See the image below to understand
+the difference.
+
+![Z-Offset](../../../assets/zoffset.svg)
+
+- Goto `Prepare` -> `Z Probe Wizard` -> `Auto Home`
+- Then click `Move Z to Home`
+- The nozzle will now move to Home Position `(0,0)`
+- Put a A4 Sheet Paper below the nozzle and adjust the `Probe Z Offset` using
+  the Click Wheel until the nozzle just touches the paper.
+- Turning the wheel clockwise will move the nozzle up and turning it
+  anti-clockwise will lower it.
+- You should be able to move to paper between the nozzle and the bed but with
+  some resistance.
+- Ensure that the Z Offset is low enough to experience some resistance but high
+  enough to allow the paper to be inserted between the bed and the nozzle from
+  outside.
+
+:::note[This can feel a bit daunting]
+
+The Z offset value will be negative, I ususally find it to be somewhere between
+`-2.1` to `-2.32`
+
+Setting the Z offset is a skill you will gain with some experience. Just make
+sure that you don't set it too low or you will scratch the print bed.
+
+:::
+
+## 7. Load Filament
 
 We need to load the filament to start printing!
 
@@ -113,7 +145,7 @@ We need to load the filament to start printing!
 
 <YoutubeVideo videoId="-haL_RVxI5A" />
 
-## 7. Print your first model!
+## 8. Print your first model!
 
 Time to print our first model, Finally!
 
